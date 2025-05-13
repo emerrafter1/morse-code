@@ -21,6 +21,7 @@ def convert_text_to_morse(text_input):
 
 def convert_morse_to_text(morse_input):
     morse_codes = morse_input.split()
+    print(morse_codes)
     result = []
     for char in morse_codes:
         if char == "/":
@@ -28,7 +29,7 @@ def convert_morse_to_text(morse_input):
         elif char in morse_code_to_letter_dict:
             result.append(morse_code_to_letter_dict[char])
 
-    return " ".join(result)
+    return "".join(result)
 
 
 
